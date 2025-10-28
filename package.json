@@ -1,0 +1,31 @@
+{
+  "name": "unit_2-project-etheral-sparkle-community",
+  "version": "1.0.0",
+  "description": "I wish to explore the world of gemstones without necessarily registring to the platform. If the content of the application was to be found interesting, I would gladly join this web community. I expect the app to provide me with a secure point of access for the rescources I might be sharing. Similarly, I expect to have abilty to modify the content I opt to share. Finally, an easy removal of added content also includes some of the basic functionalities I expect to encounter.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kit-git-kittyT/unit_2-project-etheral-sparkle-community.git"
+  },
+  "author": "Danilo Radonjic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kit-git-kittyT/unit_2-project-etheral-sparkle-community/issues"
+  },
+  "homepage": "https://github.com/Kit-git-kittyT/unit_2-project-etheral-sparkle-community#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.19.2",
+    "morgan": "^1.10.1"
+  },
+  "keywords": []
+}
