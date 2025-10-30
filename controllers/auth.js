@@ -21,7 +21,7 @@ router.post('/sign-up', async(req,res)=>{
 try{
     console.log("form data:", req.body)
     const userInDatabase= await User.findOne({username: req.body.username});
-    if(userInDatabase){return req.send('Username already taken');
+    if(userInDatabase){return res.send('Username already taken');
     }
     if (req.body.password !== req.body.confirmPassword) {
         return res.send('Password and Confirm Password must match');
@@ -39,7 +39,7 @@ try{
 }
 });
 
-router.post('sign-in', async (req,res)=>{
+router.post('/sign-in', async (req,res)=>{
     try{
       console.log('hit sign-in post')
         const userInDatabase= await User.findOne({username: req.body.username});

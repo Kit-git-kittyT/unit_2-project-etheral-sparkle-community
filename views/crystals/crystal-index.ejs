@@ -6,6 +6,23 @@
     <title>Crystal List</title>
 </head>
 <body>
-    <h1>Crystal List</h1>
+    <h1><%=user.username %>'s Crystal List</h1>
+    <a href="/">Baack</a>
+    <% crystals.forEach((crystal)=> { %>
+        <ul>
+            <li><%= crystal.name %></li>
+            <li><%= crystal.origin %></li>
+            <li><%= crystal.symbolism %></li>
+            <li><img src="<%= crystal.image %>" alt= "<%= crystal.name %>" ></li>
+            <li><%= crystal.description %></li>
+            
+        </ul>
+            <a href="/users/<%= user._id %>/crystals/<%=crystal._id %>/edit">Make Changes in your Gems' List</a>
+            <form action="/users/<%= user._id %>/crystals/<%= crystal._id %>?_method=DELETE" method="POST">
+                <button type="submit">Remove from your List</button>
+            </form>
+   <% }) %>
+   
+   
 </body>
 </html>

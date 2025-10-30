@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit your Gem Card</title>
+</head>
+<body>
+    <form action="/users/<%= user._id %>/crystals/<%= crystal._id %>?_method=PUT" method="POST">
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%=crystal.name%>" id="name" />
+      
+        <label for="origin">Origin:</label>
+        <input type="text" name="origin" value="<%=crystal.origin%>"  id="origin" />
+      
+        <label for="symbolism">Symbolism:</label>
+        <input type="text" name="symbolism" value="<%=crystal.symbolism%>" id="symbolism" />
+      
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" ><%=crystal.description%></textarea> />
+        
+        <label for="image">Image</label>
+        <input type="text" name="image" value="<%=crystal.image%>" id="image" />
+      
+        <button type="submit">Save your Changes</button>
+          </form>
+</body>
+</html>

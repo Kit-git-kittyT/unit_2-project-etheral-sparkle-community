@@ -9,7 +9,8 @@
   <h1>The Etheral Sparkle Community</h1>
   <p>A Web Space for Sharing Knowledge about the World of Gemstones.</p>
   <%- include('./partials/_navbar.ejs') %>
-  <a class="crystals-index-link" href="/crystals">Browse for your crystal</a>
-  <a href="crystals/bridge">Share a gemstone</a>
+  <a class="crystals-index-link" href="users/<%=user._id%>/crystals">Browse your crystals</a>
+  <a href="/public/crystals">Explore the World of Crystals</a>
+  <a href="/users/ <%user._id %>/crystals/new">Share a gemstone</a>
   </body>
 </html>
