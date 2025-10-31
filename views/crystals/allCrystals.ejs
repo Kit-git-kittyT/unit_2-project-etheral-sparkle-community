@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../public/stylesheets/pretty.css" />
+    <link rel="stylesheet" href="/stylesheets/handsome.css" />
     <title>All Crystals</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
                 <p><strong>Origin:</strong> <%= crystal.origin.join(', ') %></p>
                 <p><strong>Symbolism:</strong> <%= crystal.symbolism %></p>
                 <p><strong>Description:</strong> <%= crystal.description %></p>
-                <p><strong>Image:</strong> <%= crystal.image %></p>
+                <img src="<%= crystal.image %>" alt="<%= crystal.name %>">
                 <p><em>Collected by: <%= crystal.ownerUsername %></em></p>
             </li>
         <% }) %>

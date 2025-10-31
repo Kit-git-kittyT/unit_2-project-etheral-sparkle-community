@@ -19,4 +19,14 @@ __Interactive browser application providing open-access into the world of crysta
 
 #### SWOT Analysis
 
-The general process of coding unfolded towards fulfilling functionality and restructuring the initial map of routes and links across HTML forms. Being
+The general process of coding unfolded towards fulfilling functionality and restructuring the initial map of routes and links across HTML forms. Being engaged with the process, the first significat obstacle in technical terms was threading the proliferating communication between intended commands and the databse responding to the former. As I progressed interaction became more comprehensive and the functionality outlook clearer.
+<br>
+An overview of endavours which made my learning process standout are as follows:
+a) Setting up the schema and forking its export across two js. files;
+b) Limitation by MongooseDB to accept double behaviour of initially concept of my application's features;
+c) Keep the vigilance over the database as I keep testing;
+d)Time-management and introduction of basic CSS along my coding path.
+
+
+##### Conclusion
+
