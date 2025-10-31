@@ -29,8 +29,6 @@ router.get('/', async (req, res) => {
       const currentUser = await User.findById(req.session.user._id);
       currentUser.crystals.push(req.body);
       await currentUser.save();
-      // Redirect back to the applications index view
-     // res.redirect(`/users/${currentUser._id}/crystals`);
      res.redirect(`/users/${currentUser._id}/crystals`) 
     } catch (error) {
       console.log(error);
@@ -77,6 +75,5 @@ router.delete('/:crystalId', async (req,res)=>{
         res.redirect('/');
     }
 });
-  // delete route
 
 module.exports= router;

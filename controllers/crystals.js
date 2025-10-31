@@ -6,7 +6,7 @@ const User= require('../models/User.js');
 
 router.get('/crystals', async (req, res) => {
     try {
-      const allUsers= User.find({});
+      const allUsers= await User.find({});
       const allCrystals= [];
       allUsers.forEach(user=>{
         user.crystals.forEach(crystal=>{

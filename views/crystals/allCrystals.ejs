@@ -3,9 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/stylesheets/pretty.css" />
     <title>All Crystals</title>
 </head>
 <body>
-    <h1>All</h1>
+    <h1>Crystal Collection</h1>
+    <p>Browse crystals from all collectors</p>
+    
+    <% if (crystals.length === 0) { %>
+        <p>No crystals yet!</p>
+    <% } else { %>
+        <ul>
+        <% crystals.forEach(crystal => { %>
+            <li>
+                <h3><%= crystal.name %></h3>
+                <p><strong>Origin:</strong> <%= crystal.origin.join(', ') %></p>
+                <p><strong>Symbolism:</strong> <%= crystal.symbolism %></p>
+                <p><strong>Description:</strong> <%= crystal.description %></p>
+                <p><strong>Image:</strong> <%= crystal.image %></p>
+                <p><em>Collected by: <%= crystal.ownerUsername %></em></p>
+            </li>
+        <% }) %>
+        </ul>
+    <% } %>
+    
+    <a href="/">Home</a>
+    <% if (!user) { %>
+        <a href="/auth/sign-in">Sign In to manage your crystals</a>
+    <% } else { %>
+        <a href="/users/<%=user._id%>/crystals">View Your Crystals</a>
+    <% } %>
 </body>
 </html>

@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/pretty.css" />
     <title>Crystal Web Community</title>
 </head>
 <body>
   <h1>The Etheral Sparkle Community</h1>
   <p>A Web Space for Sharing Knowledge about the World of Gemstones.</p>
   <%- include('./partials/_navbar.ejs') %>
-  <a class="crystals-index-link" href="users/<%=user._id%>/crystals">Browse your crystals</a>
-  <a href="/public/crystals">Explore the World of Crystals</a>
-  <a href="/users/ <%user._id %>/crystals/new">Share a gemstone</a>
+  
+  <% if (user) { %>
+    <a class="crystals-index-link" href="/users/<%= user._id %>/crystals">Browse your crystals</a>
+    <a class="welcome" href="/users/<%= user._id %>/crystals/new">Share a gemstone</a>
+  <% } else { %>
+    <a class="mine" href="/auth/sign-in">Sign in to manage your crystals</a>
+  <% } %>
+
+  <a class="beauty" href="/public/crystals">Explore the World of Crystals</a>
+  
   </body>
 </html>

@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../public/stylesheets/pretty.css" />
     <title>Crystal List</title>
 </head>
 <body>
     <h1><%=user.username %>'s Crystal List</h1>
-    <a href="/">Baack</a>
-    <% crystals.forEach((crystal)=> { %>
+    <a href="/">Back</a>
+   <div class="unique"><% crystals.forEach((crystal)=> { %>
         <ul>
             <li><%= crystal.name %></li>
             <li><%= crystal.origin %></li>
             <li><%= crystal.symbolism %></li>
-            <li><img src="<%= crystal.image %>" alt= "<%= crystal.name %>" ></li>
+            <li><img class="fit" src="<%= crystal.image %>" alt= "<%= crystal.name %>" ></li>
             <li><%= crystal.description %></li>
             
         </ul>
@@ -23,6 +24,6 @@
             </form>
    <% }) %>
    
-   
+</div>
 </body>
 </html>
