@@ -15,6 +15,7 @@ const authController = require('./controllers/auth.js');
 const crystalsController = require('./controllers/crystals.js');
 const usersController = require('./controllers/users.js');
 
+const port = process.env.PORT ? process.env.PORT : '3104';
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -49,6 +50,6 @@ app.use(isSignedIn);
 app.use('/users/:userId/crystals', usersController);
 
 
-app.listen(3104, ()=>{
+app.listen(port, ()=>{
     console.log("Tick-tock!")
 })
